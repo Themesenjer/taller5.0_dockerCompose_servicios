@@ -1,9 +1,7 @@
 name: Build and Publish Docker Image
 
 on:
-
   push:
-
     branches:
       - main
 
@@ -35,11 +33,11 @@ jobs:
       - name: Construir Imagen
         run: |
           docker build \
-          -t ghcr.io/${{ github.repository }}:${{ env.IMAGE_TAG }} \
-          -t ghcr.io/${{ github.repository }}:latest \
+          -t ghcr.io/themesenjer/devops-flask-postgres:${{ env.IMAGE_TAG }} \
+          -t ghcr.io/themesenjer/devops-flask-postgres:latest \
           .
 
       - name: Publicar Imagen
         run: |
-          docker push ghcr.io/${{ github.repository }}:${{ env.IMAGE_TAG }}
-          docker push ghcr.io/${{ github.repository }}:latest
+          docker push ghcr.io/themesenjer/devops-flask-postgres:${{ env.IMAGE_TAG }}
+          docker push ghcr.io/themesenjer/devops-flask-postgres:latest
