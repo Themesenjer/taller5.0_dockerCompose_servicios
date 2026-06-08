@@ -10,7 +10,7 @@ permissions:
   packages: write
 
 env:
-  IMAGE_TAG: 2.0.1
+  IMAGE_TAG: 3.0.0
 
 jobs:
 
